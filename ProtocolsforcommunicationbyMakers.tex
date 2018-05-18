@@ -5,13 +5,12 @@
 \author{Pritvi Jheengut @zcoldplayer}
 \subject{DevConMU - Protocols for Communication}
 
-\usepackage[size=a4, orientation=landscape, scale=3]{beamerposter}
+\usepackage[size=a4, orientation=landscape, scale=3.5]{beamerposter}
 
 \usepackage{lmodern}
 \usepackage{fontenc}[T1]
 \usepackage{inputenc}[utf8]
-\usepackage{hyperref}[pdfpagelabels=true,bookmarks=true,
-  unicode=true]
+\usepackage{hyperref}[pdfpagelabels=true,bookmarks=true, unicode=true]
 \usepackage{pgf}
 %\usepackage{verbatim}
 
@@ -35,31 +34,30 @@
   
   \setbeamercolor{Title bar}{fg=black!50}
   \setbeamercolor{frametitle}{parent=Title bar}
-  \setbeamercolor{titlelike}{parent=black,bg=confgreen,fg=white}
-  \setbeamercolor{block title}{bg=light!50,fg=darkblue}
+  \setbeamercolor{titlelike}{parent=light,bg=confgreen,fg=white}
+  \setbeamercolor{block title}{bg=darkblue,fg=light}
   
   \setbeamercovered{transparent,dynamic}
   
   \setbeamertemplate{blocks}[rounded][shadow=true]
-  \setbeamertemplate{background canvas}[vertical shading]
-                    [top=confgreen!25,middle=light!5,bottom=red!50]
-
+  \setbeamertemplate{background canvas}[vertical shading][top=
+    confgreen!35,middle=light!5,bottom=red!50]
+                    
   \mode<handout>{\beamertemplatesolidbackgroundcolor{black!50}}
                     
 }
 
 \begin{document}
 
-\section{Who are the Makers?}
+\section{The Makers}
 
 \title[DevConMU - Protocols for Communication]{Protocols for
-  communication by Makers}
-\subtitle{An overview of some Protocols such as SPI/I2C/CAN, modbus,
-  usb,... \\
-  Make your devices and gadgets talk to each other or/and their shields. }
+  Communication by Makers}
+\subtitle{Overview of Protocols to make your devices and gadgets talk
+  to each other or/and their shields.}
 
-\date[Developers Conference - Accelerator]{Developers Conference
-  -  18 May 2018}
+\date[Developers Conference - Accelerator]{Developers Conference -
+  18 May 2018}
 
 \maketitle
 
@@ -69,7 +67,7 @@
   \frametitle{Copyleft License Attribution}
   
   Made with love using beamer, LaTeX and git.
-    
+  
   \begin{alertblock}{This work is licensed under the LaTeX Project
       Public License.}
     To view a copy of this license, visit \\
@@ -90,126 +88,223 @@
   \end{alertblock}
 }
 
-
-\subsection{}
-
+\subsection{The  Mauritius Makers Community}
 
 \frame{
-  \frametitle{}
+  \frametitle{An introduction to the  Mauritius Makers Community -
+    Part 1}
+  
+  \begin{block}{The Mauritius Makers Community - Who are We?}
+    The is a group of people established primarily in Mauritius
+    who are
+    
+    \begin{itemize}
+    \item Passionate Makers
+    \item Hackers
+    \item Enthusiasts
+    \item Hardware Developers 
+    \item Inventors
+    \item Designers
+    \item Tinkerers
+    \item Craftman
+    \end{itemize}
+    
+  \end{block}
 
-  \begin{block}
-
+}
+    
+\frame{
+  \frametitle{An introduction to the The Mauritius Makers Community -
+    Part 2}
+  
+  \begin{block}{The Mauritius Makers Community - What we are
+      passionate about}
+    
+    geared primarily toward technological innovation such as
+    
+    \begin{itemize}
+    \item Electronics
+    \item Open Hardware
+    \item Internet Of Things
+    \item Robotics
+    \item Small Board Computers
+    \item Microcontrollers
+    \item Embedded Software
+    \item Printed Circuit Board Design
+    \item DIY - Do It Yourself
+    \item DIWO - Do It With Others
+    \item CAD - Computer Aided Designing
+    \item Wearables
+    \item 3D Printing
+    \item Plastic, Wood \& Metal Work
+    \end{itemize}
 
   \end{block}
 
 }
 
-\subsection{}
-
-
 \frame{
-  \frametitle{}
-
-  \begin{block}
-
-
+  \frametitle{Pritvi Jheengut}
+  
+  \begin{block}{Who am I?}
+    \begin{itemize}
+    \item Name : Pritvi Jheengut 
+    \item Empl : Meteorological Services 
+    \item Post : Senior Meteorological Telecommunication
+      Technician
+    \item Work : Maintain and repair Linux Workstations
+      and Automatic Weather Stations
+    \item Else : Co-founder of Mauritius Makers Community during
+      Jochen's Keynote and Introduction Of The MSCC at the Developers
+      Conference 2015
+    \item Else : Vice-President of The Linux User Group Meta
+    \item Else : Craftman At MSCC
+    \item Want : Create the Mauritius Local Guide
+    \item Want : Corsairs Hackers Reboot - October 2018 
+    \end{itemize}
   \end{block}
 
 }
 
-
-
-\subsection{}
-
+\subsection{Communications}
 
 \frame{
-  \frametitle{}
+  \frametitle{What is Communication!}
 
-  \begin{block}
+  \begin{block}{Communication theory}
+    Communication involves two parties, one a sender, the second one
+    a receiver.
 
+  \end{block}
 
+  \pause
+  
+  \begin{alertblock}{Why we need Communication?}
+    WHY???
+  \end{alertblock}
+
+}
+
+\subsection{Communication Protocols}
+
+\frame{
+  \frametitle{Communication Protocols used by Makers}
+
+  \begin{block}{Some Communication Protocols used by Makers}
+
+    \begin{itemize}
+    \item SPI
+    \item I$^2$C
+    \item CAN
+    \item SMBus
+    \end{itemize}
   \end{block}
 
 }
 
-
-
-
-
-\subsection{}
-
-
 \frame{
-  \frametitle{}
+  \frametitle{SPI}
 
-  \begin{block}
-
-
+  \begin{block}{Apropos SPI - Serial Peripheral Interface}
+    \begin{itemize}
+    \item  SPI, Serial Peripheral Interface is a single master,
+    multi-slaves four wire variable speed synchronous
+    message serial protocol.
+    \item 
+    It was originally developed by Motorola in the 1980's
+    and has become a de facto standard
+    \item SPI is  widely used by
+    microcontrollers to talk with sensors, eeprom and flash
+    memory, codecs and various other controller chips, ADC
+    \& DAC converters, and more.
+    \end{itemize}
   \end{block}
 
 }
 
-
-
-\subsection{}
-
-
 \frame{
-  \frametitle{}
+  \frametitle{I$^2$C}
 
-  \begin{block}
-
-
+  \begin{block}{Apropos I$^2$C - Inter-Integrated Circuit}
+    \begin{itemize}
+    \item     I$^2$C, Inter-Integrated Circuit is a multi-master,
+    multi-slave two-wire variable speed synchronous packet
+    switched serial protocol used in many microcontroller
+    applications. 
+    \item  It was originally developed by NXP, Philips in the 1980's
+    and  provides an inexpensive bus for connecting many
+    types of devices  with infrequent or low bandwidth
+    communications needs.
+    \item  I$^2$C is widely implemented in embedded systems.
+    \item  Since October 10, 2006, no licensing fees are required
+    to implement the I$^2$C protocol. However, fees are
+    required to obtain I$^2$C slave addresses allocated by NXP.\\
+    Source :: wikipedia
+    \end{itemize}
+    
   \end{block}
 
 }
 
-
-
-\subsection{}
-
-
 \frame{
-  \frametitle{}
+  \frametitle{CAN}
 
-  \begin{block}
-
-
+  \begin{block}{Apropos CAN - Controller Area Network}
+     \begin{itemize}
+    \item CAN, Controller Area Network is a multi-master, two or more
+    wires variable speed message based serial protocol to connect
+    two or more nodes.
+    \item   It was originally developed by Bosch which
+    has widespread use in automation, embedded devices,
+    marine, industrial, medical, automotive as well as aeronautical
+    fields. 
+    \item  Communication can be allowed over a USB or Ethernet port.\\
+    With one common cable and implemented on both hardware and
+    software, the CAN protocol enables several piece of electronic
+    equipment to be connected to each other.
+    \end{itemize}
+    
   \end{block}
 
 }
 
-
-
-\subsection{}
-
-
 \frame{
-  \frametitle{}
-
-  \begin{block}
-
-
+  \frametitle{SMBus}
+  
+  \begin{block}{Apropos SMBus - System Management Bus}
+     \begin{itemize}
+    \item  SMBus, System Management Bus is a multi-master,
+    multi-slave two-wire variable speed synchronous packet
+    switched serial protocol used in many microcontroller
+    applications. 
+    \item  It is a subset of I$^2$C and heavily used in many
+    Computer Motherboards especially those having an Intel
+    Chipset for reading sensor values such as temperature,
+    voltage, fan speed,...
+    \item  Modern I$^2$C is compatible  with SMBus.
+    \end{itemize} 
   \end{block}
-
+  
+  \begin{block}{Apropos PMBus - Power Management Bus}
+    A special mention : PMBus, Power Management Bus is a
+    variant of SMBus targeting power supplies. 
+  \end{block}
+  
 }
 
-
-
-\subsection{}
-
+\section{Communication with gadgets using UART}
 
 \frame{
-  \frametitle{}
+  \frametitle{UART}
 
-  \begin{block}
-
-
-  \end{block}
+  \begin{block}{Apropos UART - universal asynchronous
+      receiver-transmitter}
+    UART, Universal Asynchronous Receiver Transmitter
+    is a hardware device for asynchronous serial
+    communication in which the data format and
+    transmission speeds are configurable. 
+\end{block}
 
 }
-
-
-
 
 \end{document}
